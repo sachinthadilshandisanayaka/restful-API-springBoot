@@ -1,8 +1,10 @@
 package com.example.demo.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "users")
 public class User {
 	private long id;
 	private String firstName;
