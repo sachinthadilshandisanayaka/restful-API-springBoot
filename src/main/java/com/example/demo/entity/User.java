@@ -2,16 +2,27 @@ package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.ID;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+
 
 @Entity
 @Table(name = "users")
 public class User {
 	
-	@ID
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
+	@Column(name = "first_name")
 	private String firstName;
+	
+	@Column(name = "last_name")
 	private String lastName;
+	
+	@Column(name = "email")
 	private String email;
 	
 	public User(String firstName, String lastName, String email) {
