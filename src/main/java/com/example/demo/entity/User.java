@@ -2,10 +2,13 @@ package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.ID;
 
 @Entity
 @Table(name = "users")
 public class User {
+	
+	@ID
 	private long id;
 	private String firstName;
 	private String lastName;
