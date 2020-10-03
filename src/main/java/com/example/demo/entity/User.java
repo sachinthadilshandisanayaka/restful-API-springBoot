@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.persistence.Id;
@@ -29,7 +30,7 @@ public class User {
 	@Column(name = "last_name")
 	private String lastName;
 	
-	@NotNull
+	@NotBlank
 	@Email
 	@Column(name = "email")
 	private String email;

@@ -10,3 +10,4 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 }
+//get Hibernate Validator Engine Relocation Artifact » 6.1.0.Final
