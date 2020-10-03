@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.persistence.Id;
@@ -19,13 +20,17 @@ public class User {
 	private long id;
 	
 	@NotNull
-	@Size
+	@Size(min = 2, message = "first name should have at least 2 characters")
 	@Column(name = "first_name")
 	private String firstName;
 	
+	@NotNull
+	@Size(min = 2, message = "last name should have at least 2 characters")
 	@Column(name = "last_name")
 	private String lastName;
 	
+	@NotNull
+	@Email
 	@Column(name = "email")
 	private String email;
 	
