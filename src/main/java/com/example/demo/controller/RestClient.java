@@ -31,7 +31,7 @@ public class RestClient {
 		callDeleteUser();
 		
 	}
-	// json type out put
+	// Json type out put
 	private static void callGetAllUserAPI() {
 		
 		HttpHeaders headers = new HttpHeaders();
